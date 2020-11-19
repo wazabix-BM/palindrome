@@ -1,0 +1,16 @@
+{
+  "name": "@wazabix/palindrome",
+  "version": "1.0.0",
+  "description": "JS library to know if a string is a palindrome",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "palindrome",
+    "string",
+    "number"
+  ],
+  "author": "wazabix",
+  "license": "MIT"
+}
