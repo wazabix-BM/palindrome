@@ -23,4 +23,4 @@ console.log ( isPalindrome ( 1001001 ) ); // => true
 console.log ( isPalindrome ( 'kayak' ) ); // => true
 
 console.log ( isPalindrome ( 'forest' ) ); // => false
-```"# palindrome" 
+```
