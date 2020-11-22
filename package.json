@@ -1,6 +1,6 @@
 {
   "name": "@wazabix/palindrome",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JS library to know if a string is a palindrome",
   "main": "index.js",
   "scripts": {
@@ -12,5 +12,8 @@
     "number"
   ],
   "author": "wazabix",
-  "license": "MIT"
+  "license": "MIT",
+
+  "homepage": "https://github.com/wazabix-BM/palindrome#readme",
+  "repository": "https://github.com/wazabix-BM/palindrome"
 }
