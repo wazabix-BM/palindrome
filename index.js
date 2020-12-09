@@ -1,11 +1,47 @@
+const a = [ 'à', 'á', 'â', 'ä' ],
+e = [ 'é', 'è', 'ê', 'ë' ],
+chri = [ 'í', 'ì', 'î', 'ï' ],
+o = [ 'ô', 'ö', 'ò', 'ó' ],
+u = [ 'ù', 'ú', 'û', 'ü' ];
+
 module.exports.isPalindrome = function ( x ) {
     let array = [];
     let index;
 
     if ( x == undefined )
-    /* isPalindrome ( [ x ] ) */   throw new Error ( '[x] is undefined' );
+        /* isPalindrome ( [ x ] ) */ throw new Error ( '[x] is undefined' );
         
     if ( typeof x !== 'string' ) x = x.toString ();
+
+    if ( x.length == 0 )
+        /* isPalindrome ( [ x ] ) */ throw new Error ( '[x] is undefined' );
+
+    x = x.toLowerCase ();
+
+    for ( let k of a ) {
+        if ( x.includes ( k ) )
+            x = x.replace ( new RegExp ( k, 'g' ), 'a' );
+    }
+
+    for ( let k of e ) {
+        if ( x.includes ( k ) )
+            x = x.replace ( new RegExp ( k, 'g' ), 'e' );
+    }
+
+    for ( let k of u ) {
+        if ( x.includes ( k ) )
+            x = x.replace ( new RegExp ( k, 'g' ), 'u' );
+    }
+
+    for ( let k of o ) {
+        if ( x.includes ( k ) )
+            x = x.replace ( new RegExp ( k, 'g' ), 'o' );
+    }
+
+    for ( let k of chri ) {
+        if ( x.includes ( k ) )
+            x = x.replace ( new RegExp ( k, 'g' ), 'i' );
+    }
 
     for ( let i = 0 ; i < x.length ; i++ ) {
         index = x.slice ( i, i + 1 );
@@ -16,7 +52,7 @@ module.exports.isPalindrome = function ( x ) {
     array.reverse ();
     array = array.join ( '' );
 
-    if ( x == array ) return true;
+    if ( x === array ) { return true }
     
-    else return false;
+    else { return false };
 }
