@@ -2,7 +2,8 @@ const a = [ 'à', 'á', 'â', 'ä' ],
 e = [ 'é', 'è', 'ê', 'ë' ],
 chri = [ 'í', 'ì', 'î', 'ï' ],
 o = [ 'ô', 'ö', 'ò', 'ó' ],
-u = [ 'ù', 'ú', 'û', 'ü' ];
+u = [ 'ù', 'ú', 'û', 'ü', 'μ' ],
+c = [ 'ç', 'ć', 'c̀', 'ĉ', 'c̈' ];
 
 module.exports.isPalindrome = function ( x ) {
     let array = [];
@@ -41,6 +42,11 @@ module.exports.isPalindrome = function ( x ) {
     for ( let k of chri ) {
         if ( x.includes ( k ) )
             x = x.replace ( new RegExp ( k, 'g' ), 'i' );
+    }
+
+    for ( let k of c ) {
+        if ( x.includes ( k ) )
+            x = x.replace ( new RegExp ( k, 'g' ), 'c' );
     }
 
     for ( let i = 0 ; i < x.length ; i++ ) {
